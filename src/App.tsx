@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Todo from './components/todo'
 import Form from './components/form'
 import todo from './models/todo'
+import NewFeature from './components/Newfeature'
 
 function App() {
   const [todoTasks, setTodoTasks] = useState<todo[]>([])
@@ -17,6 +18,7 @@ function App() {
     <div className="App">
       <Form addTodo={addTodo} />
       <Todo todoTasks={todoTasks} removeTodo={removeTodo} />
+      <NewFeature />
     </div>
   );
 }
