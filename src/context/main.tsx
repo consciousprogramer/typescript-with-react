@@ -5,13 +5,15 @@ import todo from '../models/todo'
 type todoContextType = {
     todo: todo[],
     addTodo: (text: string) => void,
-    removeTodo: (id: string | number) => void
+    removeTodo: (id: string | number) => void,
+    newFeature: String[]
 }
 
 const todoContext = createContext<todoContextType>({
     todo: [],
     addTodo: (text) => { },
-    removeTodo: (id) => { }
+    removeTodo: (id) => { },
+    newFeature:[]
 })
 
 // const todoContextProvider: React.FC<{}> = (props) => {
@@ -29,7 +31,8 @@ const todoContextProvider: React.FC<{}> = (props) => {
     const contextValues = {
         todo: todoTasks,
         addTodo: addTodo,
-        removeTodo: removeTodo
+        removeTodo: removeTodo,
+        newFeature:["this is a new feature"]
     }
 
     return (
