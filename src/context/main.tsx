@@ -1,6 +1,7 @@
 import React, { createContext, useState } from 'react';
 import todo from '../models/todo'
 
+//this is the custom type alis created for todocontext 
 type todoContextType = {
     todo: todo[],
     addTodo: (text: string) => void,
